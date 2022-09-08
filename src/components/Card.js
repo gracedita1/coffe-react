@@ -4,7 +4,7 @@ import { Col, Image, Card } from 'react-bootstrap';
 
 export default function CardMovie(props) {
   return (
-      <Col md={4} className="movieWrapper" id="trending">
+      <Col md={4} className="movieWrapper" >
         <Card className="movieImage">
           <Image src={props.image} alt="Jurassic Movie" className="images" />
           <div className="bg-dark">

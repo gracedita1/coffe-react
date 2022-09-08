@@ -18,7 +18,9 @@ function SuperHero() {
   return (
     <div>
       <Container>
-        <h1 className="text-white">TRENDING MOVIES</h1>
+        <h1 className="text-white" id="superHero">
+          TRENDING MOVIES
+        </h1>
         <Row>
           {dataItem !== 0
             ? dataItem.map((item) => {

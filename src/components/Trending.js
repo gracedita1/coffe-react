@@ -18,20 +18,22 @@ function Trending() {
   return (
     <div>
       <Container>
-        <h1 className="text-white">TRENDING MOVIES</h1>
+        <h1 className="text-white" id="trending">
+          TRENDING MOVIES
+        </h1>
         <Row>
-            {dataItem !== 0
-              ? dataItem.map((item) => {
-                  return (
-                    <CardMovie
-                      key={item.mal_id}
-                      title={item.title}
-                      description={item.synopsis}
-                      image={item.images.jpg.image_url}
-                    />
-                  );
-                })
-              : null}
+          {dataItem !== 0
+            ? dataItem.map((item) => {
+                return (
+                  <CardMovie
+                    key={item.mal_id}
+                    title={item.title}
+                    description={item.synopsis}
+                    image={item.images.jpg.image_url}
+                  />
+                );
+              })
+            : null}
         </Row>
       </Container>
     </div>
