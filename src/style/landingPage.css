@@ -19,17 +19,17 @@
 }
 .trending{
         height: auto;
-        background: url("../assets/images/spiderman.jpg");
-        background-size: cover;
+        background: url(../assets/images/anim.jpg);
+        background-size:30%;
 }
 .superHero{
     height: auto;
     background: url("../assets/images/dino.png");
-    background-size: cover;
+    background-size: 30%;
 }
 .movieImage{
     height: auto;
-    background: black;
+    background: rgb(0, 0, 0);
     margin: 5px;
 }
 

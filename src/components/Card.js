@@ -1,10 +1,9 @@
 import React from 'react'
-import { Col, Image } from 'react-bootstrap';
+import { Col, Image, Card } from 'react-bootstrap';
 
 
-export default function Card(props) {
+export default function CardMovie(props) {
   return (
-    <div>
       <Col md={4} className="movieWrapper" id="trending">
         <Card className="movieImage">
           <Image src={props.image} alt="Jurassic Movie" className="images" />
@@ -21,6 +20,5 @@ export default function Card(props) {
           </div>
         </Card>
       </Col>
-    </div>
   );
 }

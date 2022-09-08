@@ -1,27 +1,37 @@
-import { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import Card from "./Card";
+import { getSeasonNow } from "../server/api";
+import CardMovie from "./Card";
 
 function Trending() {
+  const [dataItem, setDataItem] = useState([]);
+  console.log(dataItem);
   const getApi = useCallback(async () => {
-    const response = await fetch(
-      "https://api.jikan.moe/v4/recommendations/anime"
-    );
-    console.log(response);
+    const data = await getSeasonNow();
+    setDataItem(data);
   }, []);
 
   useEffect(() => {
-    getApi()
+    getApi();
   }, [getApi]);
 
   return (
     <div>
       <Container>
-        <br />
-        <br />
         <h1 className="text-white">TRENDING MOVIES</h1>
         <Row>
-          <Card />
+            {dataItem !== 0
+              ? dataItem.map((item) => {
+                  return (
+                    <CardMovie
+                      key={item.mal_id}
+                      title={item.title}
+                      description={item.synopsis}
+                      image={item.images.jpg.image_url}
+                    />
+                  );
+                })
+              : null}
         </Row>
       </Container>
     </div>
