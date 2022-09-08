@@ -6,8 +6,8 @@
 .intro{
     height: 300px;
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 .title{
     font-size: 3rem;
