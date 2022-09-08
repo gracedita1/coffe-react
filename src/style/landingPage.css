@@ -1,38 +1,45 @@
-.myBG{
-    height: 100vh;
-    background: url("../assets/images/main.jpg") ;
-    background-size: cover;
+.myBG {
+  height: 100vh;
+  background: url("../assets/images/main.jpg");
+  background-size: cover;
 }
-.intro{
-    height: 300px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.intro {
+  height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-.title{
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1;
-    text-shadow: 2px 2px black;
-    text-align: center;
-    letter-spacing: 4px;
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  letter-spacing: 4px;
 }
-.trending{
-        height: auto;
-        background: url(../assets/images/anim.jpg);
-        background-size:30%;
+.trending {
+  height: auto;
+  background: url("../assets/images/anim.jpg");
+  background-size: 40%;
+  object-fit: cover;
+  
 }
-.superHero{
-    height: auto;
-    background: url("../assets/images/dino.png");
-    background-size: 30%;
+.superHero {
+  height: auto;
+  background: url("../assets/images/dino.png");
+  background-size: 100%;
 }
-.movieImage{
-    height: auto;
-    background: rgb(0, 0, 0);
-    margin: 5px;
+.movieImage {
+  height: auto;
+  background: rgb(0, 0, 0);
+  margin: 5px;
 }
 
-.images{
-    height: 400px;
+.images {
+  object-fit: cover;
+}
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
